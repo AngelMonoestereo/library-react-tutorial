@@ -3,24 +3,30 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {library} from '@fortawesome/fontawesome-svg-core'
-import {faBars, faShoppingCart, faTimes, faBolt, faBookOpen, faTags, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
+import { BrowserRouter } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faBars,
+  faShoppingCart,
+  faTimes,
+  faBolt,
+  faBookOpen,
+  faTags,
+  faStar,
+  faStarHalfAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faBars, faShoppingCart, faTimes, faBookOpen, faTags, faStar, faStarHalfAlt)
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+library.add(faBars, faShoppingCart, faTimes, faBookOpen, faTags, faStar, faBolt, faStarHalfAlt);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

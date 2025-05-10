@@ -1,15 +1,15 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LibraryLogo from "../assets/Library.svg";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import LibraryLogo from '../assets/Library.svg'
+import { Link } from 'react-router-dom'
 
 const Nav = ({ numberOfItems }) => {
   function openMenu() {
-    document.body.classList += " menu--open";
+    document.body.classList += ' menu--open'
   }
 
   function closeMenu() {
-    document.body.classList.remove("menu--open");
+    document.body.classList.remove('menu--open')
   }
 
   return (
@@ -26,7 +26,7 @@ const Nav = ({ numberOfItems }) => {
           </li>
           <li className="nav__list">
             <Link to="/books" className="nav__link nav__link--primary">
-              Books
+              Records
             </Link>
           </li>
           <button className="btn__menu" onClick={openMenu}>
@@ -54,7 +54,7 @@ const Nav = ({ numberOfItems }) => {
             </li>
             <li className="menu__list">
               <Link to="/books" className="menu__link" onClick={closeMenu}>
-                Books
+                Records
               </Link>
             </li>
             <li className="menu__list">
@@ -66,7 +66,7 @@ const Nav = ({ numberOfItems }) => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

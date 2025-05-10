@@ -1,5 +1,5 @@
 import React from 'react'
-import UndrawBooks from '../assets/Undraw_Books.svg'
+import mainphoto from '../assets/mainphoto.png'
 
 const Landing = () => {
   return (
@@ -10,15 +10,15 @@ const Landing = () => {
             <h1>Discover Hidden Vinyl Treasures Online</h1>
             <h2>
               Find Your Dream Record at{' '}
-              <span className="purple">Vinyl Library</span>
+              <span className="orange">Vinyl Library</span>
             </h2>
 
             <a href="#features">
-              <button className="btn">Browse books</button>
+              <button className="btn">Browse Records</button>
             </a>
           </div>
           <figure className="header__img--wrapper">
-            <img src={UndrawBooks} alt="" />
+            <img src={mainphoto} alt="" />
           </figure>
         </div>
       </header>

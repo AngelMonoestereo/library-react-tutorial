@@ -1,9 +1,9 @@
-import React from "react";
-import Landing from "../components/Landing";
-import Highlights from "../components/Highlights";
-import Features from "../components/Featured";
-import CheapestBooks from "../components/CheapestBooks";
-import Explore from "../components/Explore";
+import React from 'react'
+import Landing from '../components/Landing'
+import Highlights from '../components/Highlights'
+import Features from '../components/Featured'
+import Discounted from '../components/Discounted'
+import Explore from '../components/Explore'
 
 const Home = () => {
   return (
@@ -12,11 +12,11 @@ const Home = () => {
       <main>
         <Highlights />
         <Features />
-        <CheapestBooks />
+        <Discounted />
         <Explore />
       </main>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

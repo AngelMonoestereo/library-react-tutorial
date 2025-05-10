@@ -1,12 +1,11 @@
-// FAKE DATA
-export const books = [
+// FAKE DAT
 
-  export const vinyls = [
+  export const books = [
   {
     id: 1,
     title: "Kind of Blue",
     artist: "Miles Davis",
-    url: "https://m.media-amazon.com/images/I/71s0Q0X5N6L._AC_SY679_.jpg",
+    url: "/images/KindOfBlue.jpeg",
     originalPrice: 29.99,
     salePrice: 24.99,
     rating: 5,
@@ -15,7 +14,7 @@ export const books = [
     id: 2,
     title: "Time Out",
     artist: "Dave Brubeck Quartet",
-    url: "https://m.media-amazon.com/images/I/81V5WzJ7vDL._AC_SY679_.jpg",
+    url: "/images/TimeOut.jpeg",
     originalPrice: 34.99,
     salePrice: 29.99,
     rating: 4.5,
@@ -24,7 +23,7 @@ export const books = [
     id: 3,
     title: "A Love Supreme",
     artist: "John Coltrane",
-    url: "https://m.media-amazon.com/images/I/81V5WzJ7vDL._AC_SY679_.jpg",
+    url: "/images/alovesupreme.jpeg",
     originalPrice: 39.99,
     salePrice: 34.99,
     rating: 5,
@@ -33,7 +32,7 @@ export const books = [
     id: 4,
     title: "Monk's Dream",
     artist: "Thelonious Monk",
-    url: "https://m.media-amazon.com/images/I/91nujEwIpYL._AC_SY679_.jpg",
+    url: "/images/Monk'sDream.jpeg",
     originalPrice: 25.99,
     salePrice: 19.99,
     rating: 4.5,
@@ -42,7 +41,7 @@ export const books = [
     id: 5,
     title: "Bird and Diz",
     artist: "Charlie Parker & Dizzy Gillespie",
-    url: "https://m.media-amazon.com/images/I/61mIq2iJUXL._AC_SY679_.jpg",
+    url: "/images/BirdandDiz.jpeg",
     originalPrice: 27.99,
     salePrice: 22.99,
     rating: 4.8,
@@ -51,7 +50,7 @@ export const books = [
     id: 6,
     title: "Giant Steps",
     artist: "John Coltrane",
-    url: "https://m.media-amazon.com/images/I/81V5WzJ7vDL._AC_SY679_.jpg",
+    url: "/images/GiantSteps.jpeg",
     originalPrice: 32.99,
     salePrice: 27.99,
     rating: 5,
@@ -60,7 +59,7 @@ export const books = [
     id: 7,
     title: "Mingus Ah Um",
     artist: "Charles Mingus",
-    url: "https://m.media-amazon.com/images/I/71s0Q0X5N6L._AC_SY679_.jpg",
+    url: "/images/MingusAhUm.jpeg",
     originalPrice: 28.99,
     salePrice: 23.99,
     rating: 4.7,
@@ -69,7 +68,7 @@ export const books = [
     id: 8,
     title: "Blue Train",
     artist: "John Coltrane",
-    url: "https://m.media-amazon.com/images/I/81V5WzJ7vDL._AC_SY679_.jpg",
+    url: "/images/BlueTrain.jpeg",
     originalPrice: 30.99,
     salePrice: 25.99,
     rating: 4.9,
@@ -78,7 +77,7 @@ export const books = [
     id: 9,
     title: "Brilliant Corners",
     artist: "Thelonious Monk",
-    url: "https://m.media-amazon.com/images/I/91nujEwIpYL._AC_SY679_.jpg",
+    url: "/images/BrilliantCorners.jpeg",
     originalPrice: 26.99,
     salePrice: 21.99,
     rating: 4.6,
@@ -87,18 +86,16 @@ export const books = [
     id: 10,
     title: "Bitches Brew",
     artist: "Miles Davis",
-    url: "https://m.media-amazon.com/images/I/61mIq2iJUXL._AC_SY679_.jpg",
+    url: "/images/BitchesBrew.jpeg",
     originalPrice: 35.99,
     salePrice: 30.99,
     rating: 4.8,
   },
-  export const vinyls = [
-
   {
     id: 11,
     title: "Somethin' Else",
     artist: "Cannonball Adderley",
-    url: "https://m.media-amazon.com/images/I/71s0Q0X5N6L._AC_SY679_.jpg",
+    url: "/images/Somethin'Else.jpeg",
     originalPrice: 29.99,
     salePrice: 24.99,
     rating: 5,
@@ -107,14 +104,13 @@ export const books = [
     id: 12,
     title: "Idle Moments",
     artist: "Grant Green",
-    url: "https://m.media-amazon.com/images/I/81V5WzJ7vDL._AC_SY679_.jpg",
+    url: "/images/IdleMoments.jpeg",
     originalPrice: 25.99,
     salePrice: 21.99,
     rating: 4.5,
   },
 ];
 
-];
 
 //   {
 //     id: 1,
