@@ -29,7 +29,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
                 <FontAwesomeIcon icon="arrow-left" />
               </Link>
               <Link to="/books" className="book__link">
-                <h2 className="book__selected--title--top">Books</h2>
+                <h2 className="book__selected--title--top">Records</h2>
               </Link>
             </div>
             <div className="book__selected">
@@ -71,6 +71,15 @@ const BookInfo = ({ books, addToCart, cart }) => {
                     Add to Cart
                   </button>
                 )}
+                {/* {bookExistsOnCart() ? (
+                  <Link to="/cart" className="book__link">
+                    <button className="btn">Go to Cart</button>
+                  </Link>
+                ) : (
+                  <button className="btn" onClick={() => addToCart(book)}>
+                    Add to Cart
+                  </button>
+                )} */}
               </div>
             </div>
           </div>
