@@ -1,50 +1,60 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import Price from './Price'
+import Rating from './Ratings'
 
 const Book = ({ book }) => {
+  const [img, setImg] = useState(null)
+  const mountedRef = useRef(true)
+
+  useEffect(() => {
+    console.log('Trying to load:', book.url)
+
+    const image = new Image()
+    image.src = book.url
+    image.onload = () => {
+      setTimeout(() => {
+        if (mountedRef.current) {
+          setImg(image)
+        }
+      }, 300)
+    }
+
+    return () => {
+      mountedRef.current = false
+    }
+  }, [book.url])
+
   return (
     <div className="book">
-      <Link to={`/books/${book.id}`}>
-        <figure className="book__img--wrapper">
-          <img src={book.url} alt={book.title} />
-        </figure>
-      </Link>
+      {img ? (
+        <>
+          <Link to={`/books/${book.id}`}>
+            <figure className="book__img--wrapper">
+              <img src={img.src} alt={book.title} className="book__img" />
+            </figure>
+          </Link>
 
-      <div className="book__title">
-        <Link to={`/books/${book.id}`} className="book__title--link">
-          {book.title}
-        </Link>
-      </div>
+          <div className="book__title">
+            <Link to={`/books/${book.id}`} className="book__title--link">
+              {book.title}
+            </Link>
+          </div>
 
-      <div className="book_ratings">
-        {new Array(Math.floor(book.rating)).fill(0).map((_, index) => (
-          <FontAwesomeIcon
-            icon="star"
-            key={index}
-            style={{ color: '#facc15' }}
+          <Rating rating={book.rating} />
+          <Price
+            salePrice={book.salePrice}
+            originalPrice={book.originalPrice}
           />
-        ))}
-        {Number.isInteger(book.rating) ? (
-          ''
-        ) : (
-          <FontAwesomeIcon icon="star-half-alt" style={{ color: '#facc15' }} />
-        )}
-      </div>
-
-      <div className="book__price">
-        {book.salePrice ? (
-          <>
-            <span className="book__price--normal">
-              ${book.originalPrice.toFixed(2)}
-            </span>{' '}
-            ${book.salePrice.toFixed(2)}
-          </>
-        ) : (
-          <>${book.originalPrice.toFixed(2)}</>
-        )}
-      </div>
+        </>
+      ) : (
+        <>
+          <div className="book__img--skeleton skeleton"></div>
+          <div className="skeleton book__title--skeleton"></div>
+          <div className="skeleton book__rating--skeleton"></div>
+          <div className="skeleton book__price--skeleton"></div>
+        </>
+      )}
     </div>
   )
 }
