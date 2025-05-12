@@ -49,37 +49,40 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Nav numberOfItems={numberOfItems()} />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/books" render={() => <Books books={books} />} />
-          <Route
-            path="/books/:id"
-            render={(routeProps) => (
-              <BookInfo
-                books={books}
-                addToCart={addToCart}
-                cart={cart}
-                {...routeProps}
-              />
-            )}
+  <div className="App">
+    <Nav numberOfItems={numberOfItems()} />
+
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/books" render={() => <Books books={books} />} />
+      <Route
+        path="/books/:id"
+        render={(routeProps) => (
+          <BookInfo
+            {...routeProps}
+            books={books}
+            addToCart={addToCart}
+            cart={cart}
           />
-          <Route
-            path="/cart"
-            render={() => (
-              <Cart
-                books={books}
-                cart={cart}
-                changeQuantity={changeQuantity}
-                removeItem={removeItem}
-              />
-            )}
+        )}
+      />
+      <Route
+        path="/cart"
+        render={() => (
+          <Cart
+            books={books}
+            cart={cart}
+            changeQuantity={changeQuantity}
+            removeItem={removeItem}
           />
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+        )}
+      />
+    </Switch>
+
+    <Footer />
+  </div>
+</Router>
+
   );
 }
 
